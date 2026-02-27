@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziyi Wang | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="nav-logo">ZW</a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about/index.html">About</a></li>
+                <li><a href="./work/index.html">Work</a></li>
+                <li><a href="./projects/index.html">Projects</a></li>
+                <li><a href="./hobbies/index.html">Hobbies</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Ziyi Wang</h1>
+                <h2 class="hero-title">Data Analyst & BI Professional</h2>
+                <p class="hero-description">
+                    Business Analytics postgraduate with hands-on experience in
+                    data transformation, reporting, and operational support across
+                    enterprise environments.
+                </p>
+                <div class="hero-buttons">
+                    <a href="./about/index.html" class="btn btn-primary">Learn More</a>
+                    <a href="./work/index.html" class="btn btn-secondary">View My Work</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="mailto:itszoey211@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/-ziyi-wang/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Itzoeyw" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/profile.jpeg" alt="Ziyi Wang">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#explore"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Quick Intro Cards -->
+    <section id="explore" style="background: #fff;">
+        <div class="container">
+            <div class="intro-cards">
+                <a href="./about/index.html" class="intro-card">
+                    <i class="fas fa-user"></i>
+                    <h3>About Me</h3>
+                    <p>My background, skills, and education in data analytics and BI.</p>
+                    <span class="card-arrow">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="./work/index.html" class="intro-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Work</h3>
+                    <p>Professional experience at Amazon, Cino, and UCC.</p>
+                    <span class="card-arrow">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="./hobbies/index.html" class="intro-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Hobbies</h3>
+                    <p>Photography and creative work captured through my lens.</p>
+                    <span class="card-arrow">Explore <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="./projects/index.html" class="intro-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Projects</h3>
+                    <p>Data dashboards and analytics projects with real impact.</p>
+                    <span class="card-arrow">Explore <i class="fas fa-arrow-right"></i></span>
+</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ziyi Wang. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="mailto:itszoey211@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/-ziyi-wang/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Itzoeyw" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile nav
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('active'));
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const t = document.querySelector(anchor.getAttribute('href'));
+                if (t) t.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>

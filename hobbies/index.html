@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies | Ziyi Wang</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">ZW</a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../work/index.html">Work</a></li>
+                <li><a href="../projects/index.html">Projects</a></li>
+                <li><a href="../hobbies/index.html" class="active">Hobbies</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header-title">Hobbies</h1>
+            <p class="page-header-subtitle">
+                Moments captured through my lens
+            </p>
+            <div class="page-header-line"></div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" style="background: #fff;">
+        <div class="container">
+            <p class="hobbies-intro">
+                Beyond data, I love photography and baking. Here are some of my
+                favourite shots and creations from my travels and everyday life.
+            </p>
+
+            <!-- Filter Buttons -->
+            <div class="photo-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+                <button class="filter-btn" data-filter="photography">Photography</button>
+                <button class="filter-btn" data-filter="street">Street</button>
+                <button class="filter-btn" data-filter="baking">Baking</button>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="photo-gallery">
+
+                <!-- Photo 1 -->
+                <div class="photo-item" data-category="travel">
+                    <div class="photo-wrapper">
+                        <img src="../assets/photos/photo1.jpeg" alt="Sunset in Cork" loading="lazy">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h4>Sunset in Cork</h4>
+                                <p>Travel · 2024</p>
+                            </div>
+                            <button class="photo-expand"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-caption">A beautiful golden sunset over the River Lee in Cork city.</div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photo-item" data-category="photography">
+                    <div class="photo-wrapper">
+                        <img src="../assets/photos/photo2.jpeg" alt="Morning Mist" loading="lazy">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h4>Morning Mist</h4>
+                                <p>Photography · 2024</p>
+                            </div>
+                            <button class="photo-expand"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-caption">Early morning fog rolling through the countryside.</div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photo-item" data-category="street">
+                    <div class="photo-wrapper">
+                        <img src="../assets/photos/photo3.jpeg" alt="City Lights" loading="lazy">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h4>City Lights</h4>
+                                <p>Street · 2023</p>
+                            </div>
+                            <button class="photo-expand"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-caption">Night-time reflections on a rainy city street.</div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="photo-item" data-category="travel">
+                    <div class="photo-wrapper">
+                        <img src="../assets/photos/photo4.jpeg" alt="Cliffs of Moher" loading="lazy">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h4>Cliffs of Moher</h4>
+                                <p>Travel · 2024</p>
+                            </div>
+                            <button class="photo-expand"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-caption">Standing at the edge of Ireland's most iconic cliffs.</div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-item" data-category="baking">
+                    <div class="photo-wrapper">
+                        <img src="../assets/photos/photo5.jpeg" alt="Afternoon Tea" loading="lazy">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h4>Afternoon Tea</h4>
+                                <p>Baking · 2024</p>
+                            </div>
+                            <button class="photo-expand"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-caption">Homemade scones and cakes for a weekend afternoon tea.</div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-item" data-category="photography">
+                    <div class="photo-wrapper">
+                        <img src="../assets/photos/photo6.jpeg" alt="Golden Hour" loading="lazy">
+                        <div class="photo-overlay">
+                            <div class="photo-info">
+                                <h4>Golden Hour</h4>
+                                <p>Photography · 2023</p>
+                            </div>
+                            <button class="photo-expand"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="photo-caption">Warm light flooding through the trees at dusk.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ziyi Wang. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="mailto:itszoey211@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/-ziyi-wang/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Itzoeyw" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('active'));
+        });
+
+        // Photo filters
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const photos = document.querySelectorAll('.photo-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                photos.forEach(p => {
+                    p.classList.toggle('hidden', f !== 'all' && p.dataset.category !== f);
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightboxImg');
+        const lbCap = document.getElementById('lightboxCaption');
+        let idx = 0;
+
+        function vis() { return [...document.querySelectorAll('.photo-item:not(.hidden)')]; }
+
+        function openLB(i) {
+            const list = vis(); idx = i;
+            const p = list[idx];
+            lbImg.src = p.querySelector('img').src;
+            const title = p.querySelector('h4').textContent;
+            const caption = p.querySelector('.photo-caption').textContent;
+            lbCap.textContent = title + ' — ' + caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLB() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navLB(d) {
+            const list = vis();
+            idx = (idx + d + list.length) % list.length;
+            const p = list[idx];
+            lbImg.src = p.querySelector('img').src;
+            const title = p.querySelector('h4').textContent;
+            const caption = p.querySelector('.photo-caption').textContent;
+            lbCap.textContent = title + ' — ' + caption;
+        }
+
+        document.querySelectorAll('.photo-wrapper').forEach(w => {
+            w.addEventListener('click', () => {
+                const item = w.closest('.photo-item');
+                const i = vis().indexOf(item);
+                if (i >= 0) openLB(i);
+            });
+        });
+
+        document.getElementById('lightboxClose').addEventListener('click', closeLB);
+        document.getElementById('lightboxPrev').addEventListener('click', () => navLB(-1));
+        document.getElementById('lightboxNext').addEventListener('click', () => navLB(1));
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLB(); });
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLB();
+            if (e.key === 'ArrowLeft') navLB(-1);
+            if (e.key === 'ArrowRight') navLB(1);
+        });
+    </script>
+
+</body>
+</html>
